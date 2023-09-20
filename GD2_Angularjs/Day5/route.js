@@ -2,6 +2,9 @@
 // Khai báo các thư viện phụ thuộc
 var mySPA = angular.module("mySPA", ["ngRoute"]);
 
+// Khởi tạo controller được sử dụng trong file html với app
+mySPA.controller("sanPhamController", sanPhamController);
+
 // Cấu hình url, chuyển được nội dung các trang theo từng url
 mySPA.config(function ($routeProvider, $locationProvider) {
     //Xóa khoảng trắng
@@ -18,7 +21,8 @@ mySPA.config(function ($routeProvider, $locationProvider) {
         templateUrl: "./pages/chi-tiet-sp.html"
     })
     .when("/qlsp", {
-        templateUrl: "./pages/qlsp.html"
+        templateUrl: "./pages/qlsp.html",
+        controller: "sanPhamController"
     })
     .otherwise({
         redirectTo: "/trang-chu"

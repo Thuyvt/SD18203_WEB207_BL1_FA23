@@ -1,1 +1,21 @@
 <p>QUẢN LÝ SẢN PHẨM</p>
+<div ng-controller="sanPhamController">
+    <h3>DANH SÁCH SẢN PHẨM</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Tên</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Giá bán</th>
+          </tr>
+        </thead>
+        <tbody>
+            <!-- Sử dụng directive để for dữ liệu: ng-repeat -->
+          <tr ng-repeat="sp in listSp">
+            <td>{{sp.ten}}</td>
+            <td>{{sp.soLuong}}</td>
+            <td>{{sp.gia}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
