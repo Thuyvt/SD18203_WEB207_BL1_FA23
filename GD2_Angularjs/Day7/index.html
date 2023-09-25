@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 + 4</title>
+    <!-- Khai báo bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body ng-app="myLab3_4">
+    <!-- Nhúng layout header -->
+    <div ng-include="'layout/header.html'"></div>
+    <div ng-view></div>
+    <!-- Nhúng footer -->
+    <div ng-include="'layout/footer.html'"></div>
+    <!-- Nhúng thư viện angular js -->
+    <script src="../../lib/angular.js"></script>
+    <!-- Nhúng thư route để dùng SPA-->
+    <script src="../../lib/angular-route.js"></script>
+    <!-- Nhúng các file js chứa controller -->
+    <script src="controller/bai1.js"></script>
+    <script src="controller/bai2.js"></script>
+    <script src="controller/bai3.js"></script>
+    <script src="controller/bai4.js"></script>
+
+    <!-- Nhúng file route điều hướng -->
+    <script src="route.js"></script>
+
+</body>
+</html>

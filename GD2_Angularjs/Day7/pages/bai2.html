@@ -1,0 +1,36 @@
+<h1>Bài 2</h1>
+<h2>Danh sách </h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Giá</th>
+      <th scope="col">Số lượng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- <tr>
+      <td>1</td>
+      <td>Iphone</td>
+      <td>13000000</td>
+      <td><input type="number" ng-change="" ng-model="sl1"></td>
+    </tr>
+     <tr>
+        <td>2</td>
+        <td>Sansung</td>
+        <td>9000000</td>
+        <td><input type="number" ng-model="sl2"></td>
+    </tr> -->
+    <tr ng-repeat="sp in lstSp">
+        <td>{{sp.id}}</td>
+        <td>{{sp.ten}}</td>
+        <td>{{sp.gia}}</td>
+        <td><input type="number" ng-change="onChangeSl()" ng-model="sp.sl"></td>
+    </tr>
+  </tbody>
+</table>
+<!-- <h2>TỔNG TIỀN: {{13000000 * sl1 + 9000000 * sl2}}</h2> -->
+<h2>TỔNG TIỀN: {{tongTien}}</h2>
+
+<a href="#/thanh-toan/2/{{tongTien}}">Bài 4</a>

@@ -1,0 +1,51 @@
+<h1>Bài 1</h1>
+<form>
+    <div class="mb-3">
+      <label for="username" class="form-label">Username: </label>
+      <input type="text" class="form-control" id="username" ng-model="user.username">
+    </div>
+    <div class="mb-3">
+      <label for="pass" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="pass" ng-model="user.pass">
+    </div>
+    <div class="mb-3">
+        <label for="ho" class="form-label">Họ:</label>
+        <input type="text" class="form-control" id="ho" ng-model="user.ho">
+      </div>
+      <div class="mb-3">
+        <label for="tenDem" class="form-label">Tên đệm:</label>
+        <input type="text" class="form-control" id="tenDem" ng-model="user.tenDem">
+      </div>
+      <div class="mb-3">
+        <label for="ten" class="form-label">Tên:</label>
+        <input type="text" class="form-control" id="ten" ng-model="user.ten">
+      </div>
+      <div class="mb-3">
+        <label for="ngaySinh" class="form-label">Ngày sinh:</label>
+        <input type="date" class="form-control" id="ngaySinh" ng-model="user.ngaySinh">
+      </div>
+    <button type="submit" class="btn btn-primary" ng-click="them()">Submit</button>
+  </form>
+  <h2>Danh sách </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Pass</th>
+        <th scope="col">Họ</th>
+        <th scope="col">Tên đệm</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Ngày sinh</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="us in lstUser">
+        <td>{{us.username}}</td>
+        <td>{{us.pass}}</td>
+        <td>{{us.ho}}</td>
+        <td>{{us.tenDem}}</td>
+        <td>{{us.ten}}</td>
+        <td>{{us.ngaySinh | date: "dd/MM/yyyy" }}</td>
+      </tr>
+    </tbody>
+  </table>
