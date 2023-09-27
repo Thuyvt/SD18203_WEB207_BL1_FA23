@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AngularJS Form Validation</title>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+	<style>
+		body {
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1 {
+			color: green;
+		}
+	</style>
+</head>
+
+<body ng-app="developapp">
+	<h1>GeeksforGeeks</h1>
+	<h3>AngularJS Custom Form Validation</h3>
+	<form name="form1">
+		Username:
+		<input name="username" required><br><br>
+		Age:
+		<input name="userage"
+			ng-model="userage" required app-directive>
+	</form>
+	<p>The input's valid state is:</p>
+	<h3>{{form1.userage.$valid}}</h3>
+	<script>
+		var app = angular.module('developapp', []);
+		app.directive('appDirective', function () {
+			return {
+				require: 'ngModel',
+				link: function (scope, element, attr, mCtrl) {
+					function myValidation(value) {
+						if (value >= 18) {
+							mCtrl.$setValidity('charE', true);
+						} else {
+							mCtrl.$setValidity('charE', false);
+						}
+						return value;
+					}
+					mCtrl.$parsers.push(myValidation);
+				}
+			};
+		});
+	</script>
+	<p>
+		<b>Note:</b>
+		The input field must have
+		user age greater than 18 to be
+		considered valid for voting.
+	</p>
+</body>
+</html>

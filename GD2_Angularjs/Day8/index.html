@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Trạng thái ô input 
+    $dirty: ô input đã được thay đổi dữ liệu
+    $invalid: ô input không hợp lệ
+    $valid: ô input hợp lệ
+    $submitted: dữ liệu input trên form được gửi đi
+  -->
+  <!-- RÀNG BUỘC VỚI Ô INPUT
+    <input ng-model="string"
+        [name="string"]
+        [required]
+        [ng-required="boolean"]
+        [ng-minlength="number"]
+        [ng-maxlength="number"]
+        [ng-pattern="string"]
+        [ng-trim="boolean"]...>
+-->
+
+<body ng-app="">
+    <form name="myForm">
+        <input type="text" name="myInput" ng-model="myInput" required>
+        <p><i ng-if="myForm.myInput.$dirty && myForm.myInput.$invalid">
+            Bắt buộc nhập trường thông tin trên</i></p>
+        Nhập tuổi: <input type="t" name="myAge" ng-model="myAge" min="18" max="45">
+        <p><i ng-show="myForm.myAge.$dirty && myForm.myAge.$invalid">
+            Tuổi không hợp lệ
+        </i></p>
+    </form>
+    <!-- <p>Trạng thái input: </p> -->
+    <!-- <h1>{{myForm.myInput.$valid}}</h1> -->
+    <!-- Nhúng angular js -->
+    <script src="../../lib/angular.js"></script>
+    <style>
+        input.ng-valid {
+            background-color: greenyellow;
+        }
+        input.ng-invalid { 
+            background-color: red;
+        }
+    </style>
+</body>
+</html>
