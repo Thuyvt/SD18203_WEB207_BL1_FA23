@@ -5,6 +5,7 @@
                 <th>Id</th>
                 <th>Tiêu đề</th>
                 <th>Người đăng</th>
+                <th>Hành động</th>
             </tr>
         </thead>
         <tbody>
@@ -12,6 +13,23 @@
                 <td><a href="#detail/{{post.id}}">{{post.id}}</a></td>
                 <td>{{post.title}}</td>
                 <td>{{post.author}}</td>
+                <td>
+                    <button ng-click="onSelect($index)">Sửa</button>
+                    <button ng-click="delete($index)">Xóa</button>
+                </td>
             </tr>
         </tbody>
     </table>
+    <button><a href="#detail/thuyvt66">Lọc</a></button>
+
+    <!-- FORM SỬA -->
+    <h3>SỬA THÔNG TIN</h3>
+    <form action="" ng-submit="onSubmit($event)">
+        <label for="">ID: </label>
+        <input type="text" disabled ng-model="post.id"><br>
+        <label for="">Tiêu đề:</label>
+        <input type="text" ng-model="post.title"><br>
+        <label for="">Người đăng:</label>
+        <input type="text" ng-model="post.author"> <br>
+        <button type="submit">Xác nhận sửa</button>
+    </form>

@@ -1,12 +1,34 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 2, "title": "AngularJs CRUD", "author": "thuyvt66" },
-    { "id": 3, "title": "REST FULL API", "author": "typicode" }
+    {
+      "id": 2,
+      "title": "AngularJs CRUD 2",
+      "author": "thuyvt66"
+    },
+    {
+      "id": 1,
+      "title": "AngularJs CRUD 1",
+      "author": "thuyvt66"
+    },
+    {
+      "id": 3,
+      "title": "AngularJs CRUD 3",
+      "author": "thuyvt66"
+    },
+    {
+      "id": 4,
+      "title": "AngularJs CRUD 4",
+      "author": "thuyvt66"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment1", "postId": 2 }
+    {
+      "id": 2,
+      "body": "some comment1",
+      "postId": 2
+    }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }
