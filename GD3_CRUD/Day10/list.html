@@ -22,8 +22,8 @@
     </table>
     <button><a href="#detail/thuyvt66">Lọc</a></button>
 
-    <!-- FORM SỬA -->
-    <h3>SỬA THÔNG TIN</h3>
+    <!-- FORM -->
+    <h3>FORM THÔNG TIN</h3>
     <form action="" ng-submit="onSubmit($event)">
         <label for="">ID: </label>
         <input type="text" disabled ng-model="post.id"><br>
@@ -32,4 +32,15 @@
         <label for="">Người đăng:</label>
         <input type="text" ng-model="post.author"> <br>
         <button type="submit">Xác nhận sửa</button>
+    </form>
+
+    <h3>THÊM THÔNG TIN</h3>
+    <form action="" ng-submit="onCreate($event)">
+        <label for="">ID: </label>
+        <input type="number" ng-model="post.id"><br>
+        <label for="">Tiêu đề:</label>
+        <input type="text" ng-model="post.title"><br>
+        <label for="">Người đăng:</label>
+        <input type="text" ng-model="post.author"> <br>
+        <button type="submit">Thêm thông tin</button>
     </form>

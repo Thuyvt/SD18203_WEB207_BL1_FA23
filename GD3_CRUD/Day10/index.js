@@ -60,6 +60,32 @@ app.controller("listPostsController", function ($scope, $http, $routeParams){
         })
         .catch(function (error) {});
     }
+
+    // xác nhận sửa
+    $scope.onSubmit = function(event) {
+        event.preventDefault();
+        // gọi api lưu thay đổi dữ liệu vừa nhập
+        $http.put(api_post+"/" + $scope.post.id , $scope.post)
+        .then(function(response) { 
+            alert("sửa thành công");
+        })
+        .catch(function(error) {
+            alert("sửa thất bại");
+        });
+    }
+
+    // tạo mới thông tin đối tượng
+    $scope.onCreate = function(event) {
+        event.preventDefault();
+        // gọi api thêm dữ liệu mới
+        $http.post(api_post, $scope.post)
+        .then(function(response) { 
+            alert("thêm thành công");
+        })
+        .catch(function(error) {
+            alert("thêm thất bại");
+        });
+    }
 });
 
 app.config(function($routeProvider, $locationProvider) {

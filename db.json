@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": 2,
-      "title": "AngularJs CRUD 2",
-      "author": "thuyvt66"
+      "title": "AngularJs CRUD 2 ádasd",
+      "author": "thuyvt66 ádasda"
     },
     {
       "id": 1,
@@ -19,6 +19,11 @@
       "id": 4,
       "title": "AngularJs CRUD 4",
       "author": "thuyvt66"
+    },
+    {
+      "id": 6,
+      "title": "7",
+      "author": "10"
     }
   ],
   "comments": [
