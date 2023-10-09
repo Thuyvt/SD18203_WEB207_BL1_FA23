@@ -1,0 +1,3 @@
+function hoaDonCtrl($scope) {
+    
+}

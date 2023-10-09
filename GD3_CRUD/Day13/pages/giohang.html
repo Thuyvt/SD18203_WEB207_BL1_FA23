@@ -1,0 +1,28 @@
+<h1>Giỏ hàng</h1>
+<table class="table">
+    <thead>
+        <th></th>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Hành động</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="sp in cart">
+            <td>
+                <input type="checkbox" ng-model="sp.isChecked" ng-change="tinhSoLuong()">
+            </td>
+            <td>{{sp.id}}</td>
+            <td>{{sp.tenSp}}</td>
+            <td>{{sp.gia}}</td>
+            <td>
+                <input type="number" ng-change="tinhSoLuong()" ng-model="sp.soLuong">
+            </td>
+            <td> <button type="submit" class="btn btn-danger" ng-click="xoaGioHang($index)">Xóa</button></td>
+        </tr>
+    </tbody>
+</table>
+<h2>Sản phẩm đã chọn: {{tongSoLuong}}</h2>
+<button type="submit" class="btn btn-success" ng-click="mua()">MUA</button>
+<p>{{thongBao}}</p>

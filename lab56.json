@@ -1,0 +1,63 @@
+{
+  "taikhoan": [
+    {
+      "id": 1,
+      "username": "thuyvt",
+      "password": "1235"
+    },
+    {
+      "id": 2,
+      "username": "thuyvt66",
+      "password": "54321"
+    }
+  ],
+  "giohang": [
+    {
+      "id": 1,
+      "tenSp": "Sản phẩm 1",
+      "gia": 150000,
+      "soLuong": 10,
+      "isChecked": false
+    },
+    {
+      "id": 2,
+      "tenSp": "Sản phẩm 2",
+      "gia": 90000,
+      "soLuong": 5,
+      "isChecked": false
+    },
+    {
+      "id": 3,
+      "idsp": 3,
+      "tenSp": "Sản phẩm 3",
+      "gia": 350000,
+      "soLuong": 2
+    }
+  ],
+  "hoadon": [
+    {
+      "id": 1,
+      "idsp": 3,
+      "tenSp": "Sản phẩm 3",
+      "gia": 350000,
+      "soLuong": 2,
+      "tongTien": 700000
+    },
+    {
+      "id": 2,
+      "idsp": 2,
+      "tenSp": "Sản phẩm 2",
+      "gia": 90000,
+      "soLuong": 2,
+      "tongTien": 180000
+    },
+    {
+      "idsp": 1,
+      "tenSp": "Sản phẩm 1",
+      "gia": 150000,
+      "soluong": 10,
+      "tongTien": 1500000,
+      "id": 3
+    }
+  ]
+}
